@@ -1,0 +1,43 @@
+{
+  "name": "blog.ricknigel.dev",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "ricknigel",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "highlight.js": "^10.4.1",
+    "next": "^10.0.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "rehype-stringify": "^8.0.0",
+    "remark": "^13.0.0",
+    "remark-footnotes": "^3.0.0",
+    "remark-gfm": "^1.0.0",
+    "remark-highlight.js": "^6.0.0",
+    "remark-html": "^13.0.1",
+    "remark-parse": "^9.0.0",
+    "remark-rehype": "^8.0.0",
+    "unified": "^9.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.13",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "typescript": "^4.1.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ricknigel/blog.ricknigel.dev"
+  },
+  "bugs": {
+    "url": "https://github.com/ricknigel/blog.ricknigel.dev/issues"
+  }
+}
