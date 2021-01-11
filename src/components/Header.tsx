@@ -1,14 +1,16 @@
 import React, { Fragment } from 'react';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
-import Link from 'next/link';
+import { AppBar, Toolbar } from '@material-ui/core';
+import CustomLink from './CustomLink';
 
 const Header = () => (
   <Fragment>
     <AppBar position="static" color="default" variant="outlined">
       <Toolbar>
-        <Typography variant="h6">
-          <Link href={'/'}>{'ricknigel.dev'}</Link>
-        </Typography>
+        <h2>
+          <CustomLink href={'/'}>
+            {'ricknigel.dev'}
+          </CustomLink>
+        </h2>
       </Toolbar>
     </AppBar>
   </Fragment>

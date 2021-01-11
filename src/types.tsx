@@ -1,18 +1,14 @@
 export type Article = {
   contents: Content[]
-  limit: number
-  offset: number
-  totalCount: number
 };
 
-export type Content = {
-  category: string
+export type Content = Matter & {
   content: string
-  createdAt: string
   id: string
-  path: string
-  publishedAt: string
-  taglist: []
+};
+
+export type Matter = {
   title: string
-  updatedAt: string
+  date: string
+  category: string[]
 };

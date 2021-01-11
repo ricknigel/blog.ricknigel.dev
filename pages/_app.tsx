@@ -2,7 +2,8 @@ import React, { useEffect, Fragment } from 'react';
 import { AppProps } from 'next/dist/next-server/lib/router/router';
 import Layout from '../src/components/Layout';
 import Head from 'next/head';
-import 'highlight.js/styles/nnfx-dark.css';
+import '../src/styles/github-markdown.css';
+import 'highlight.js/styles/github.css';
 
 const App = ({ Component, pageProps }: AppProps) => {
 
