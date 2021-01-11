@@ -1,7 +1,6 @@
 import fs from'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { Matter } from '../types';
 
 const dir = path.join(process.cwd(), 'contents/articles');
 
@@ -39,11 +38,11 @@ export const getArticleById = async (id: string) => {
   }
 
   const matterResult = matter(fileContent);
-  const a: Matter = matterResult.data;
+  const matterData = matterResult.data;
 
   const data = {
     content: matterResult.content,
-    ...a
+    ...matterData
   }
 
   return data;
