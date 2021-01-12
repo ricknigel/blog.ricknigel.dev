@@ -8,7 +8,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex'
   },
   content: {
-    margin: theme.spacing(4),
+    [theme.breakpoints.up('sm')]: {
+      margin: theme.spacing(2)
+    },
     width: '100%',
   }
 }));

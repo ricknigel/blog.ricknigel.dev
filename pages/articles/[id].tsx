@@ -13,7 +13,7 @@ const hljs = require('remark-highlight.js');
 const ArticlePage: NextPage<Content> = (props) => {
   const { title, content, date } = props;
   return (
-    <Card className="markdown-body">
+    <Card className="markdown-body" variant="outlined">
       <CardContent>
         <Typography variant="h1">{title}</Typography>
         <p>{date}</p>

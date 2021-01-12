@@ -5,6 +5,7 @@ import React, { FC } from 'react';
 const useStyles = makeStyles((theme: Theme) => ({
   link: {
     textDecoration: 'none',
+    color: 'inherit',
     '&:visited': {
       color: 'inherit'
     },

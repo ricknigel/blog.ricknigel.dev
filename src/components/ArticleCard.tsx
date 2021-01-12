@@ -25,13 +25,13 @@ const ArticleCard: FC<Props> = ({ article }) => {
   const classes = useStyles();
   return (
     <CustomLink href={`/articles/${id}`}>
-    <article className={classes.item}>
-        <h2 className={classes.title}>{title}</h2>
-        <Typography variant="caption">{date}</Typography>
-        {category.map(item => (
-          <Typography key={item} variant="caption">{item}</Typography>
-        ))}
-    </article>
+      <article className={classes.item}>
+          <h2 className={classes.title}>{title}</h2>
+          <Typography variant="caption">{date}</Typography>
+          {category.map(item => (
+            <Typography key={item} variant="caption">{item}</Typography>
+          ))}
+      </article>
     </CustomLink>
   );
 };

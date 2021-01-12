@@ -6,12 +6,15 @@ import ArticleCard from '../src/components/ArticleCard';
 import { makeStyles, Theme } from '@material-ui/core';
 
 const useStyles = makeStyles((theme: Theme) => ({
+  title: {
+    marginLeft: theme.spacing(2)
+  },
   outline: {
     border: '1px solid #e1e4e8',
     borderRadius: '6px',
     backgroundColor: 'white'
   },
-  header: {
+  listHeader: {
     padding: theme.spacing(2),
     backgroundColor: '#f6f8fa',
     borderTopLeftRadius: '6px',
@@ -23,9 +26,9 @@ const ArticleListPage: NextPage<Article> = ({ contents }) => {
   const classes = useStyles();
   return(
     <div>
-      <h2>{'記事一覧'}</h2>
+      <h2 className={classes.title}>{'記事一覧'}</h2>
       <div className={classes.outline}>
-        <header className={classes.header}>
+        <header className={classes.listHeader}>
           {'カテゴリ'}
         </header>
         {contents && contents.map(item => (
