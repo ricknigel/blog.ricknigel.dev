@@ -4,6 +4,8 @@ date: '2021/01/09'
 category: ['その他']
 ---
 
+ブックマークしておきたいドキュメントや記事を下記にまとめる。
+
 ## コンピュータサイエンス
 
 - [大学に行かずにコンピュータサイエンスを学ぶときに優れている教科書や講義映像はどんなものがあるのか？](https://gigazine.net/news/20200624-teach-yourself-computer-science/)
@@ -12,10 +14,12 @@ category: ['その他']
 
 - [モダンJavaScript概論 − Node, npm, ECMAScript, Babel, Webpack](https://www.hypertextcandy.com/modern-javascript/)
 - [JavaScript Primer](https://jsprimer.net/)
+- [仕事ですぐに使えるTypeScript](https://future-architect.github.io/typescript-guide/)
 
 ## React
 
-- [Material-UI Template](https://material-ui.com/store/?utm_source=docs&utm_medium=referral&utm_campaign=templates-store)
+- [React公式ドキュメント](https://ja.reactjs.org/)
+- [Material-UIを使用したテンプレート集](https://material-ui.com/store/?utm_source=docs&utm_medium=referral&utm_campaign=templates-store)
 
 ## データサイエンス
 
@@ -36,3 +40,7 @@ category: ['その他']
 ## Amplify
 
 - [Next.js x Amplify Auth](https://dev.to/dabit3/the-complete-guide-to-next-js-authentication-2aco)
+
+## SEO
+
+- [SEOまるわかり大全集](https://tcd-theme.com/introduction-seo)

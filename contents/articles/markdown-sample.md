@@ -1,8 +1,12 @@
 ---
-title: 'マークダウンサンプル'
+title: '自分用マークダウン記法のチートシート'
 date: '2021/01/09'
 category: ['その他']
 ---
+
+このブログのマークダウン記法のチートシートを下記に示す。
+
+(自分が記事を書く際に見るための備忘録としてまとめた記事です。)
 
 # サンプル1
 
@@ -34,6 +38,8 @@ category: ['その他']
 2. inc list2
 3. inc list3
 
+*現状、ネストした番号付きリストに出来ていない。*
+
 ## テキスト
 
 テキスト sample sample sample sample sample sample sampleテキスト sample sample sample sample sample sample sampleテキスト sample sample sample sample sample sample sampleテキスト [sample](#) sample sample sample sample sample sampleテキスト sample sample sample sample sample sample sampleテキスト sample sample sample sample sample sample sample
@@ -42,8 +48,6 @@ category: ['その他']
 
 > sample sample sample sample sample sampleテキスト sample sample sample sample sample sample sampleテキスト sample sample sample sample sample sample sampleテキスト sample sample sample sample sample sample sampleテキスト sample sample sample sample sample sample sample
 
-> 改行sample sample sample sample sample
-
 > <cite>[引用元](#)</cite>
 
 二重引用
@@ -51,6 +55,8 @@ category: ['その他']
 > sample test
 >
 >> double cite sample text
+
+*現状、引用内で改行が出来ていない。*
 
 
 ## テーブル
@@ -101,6 +107,9 @@ public abstract strictfp class L2Char extends L2Object {
 
 ```
 
+*現状、ファイル名や行数の表示が出来ていない。*
+
+
 ## 注釈
 
 注釈text[^1]
@@ -136,7 +145,7 @@ gatsbyは、`gatsby-cli`です
 
 ---
 
-`___`
+アンダースコア3個 `___`
 
 ___
 
@@ -150,6 +159,8 @@ ___
 `https://www.google.co.jp/`
 
 https://www.google.co.jp/
+
+*現状、リンククリック時に新規ウィンドウで開くことが出来ていない。*
 
 ## 取り消し線
 
@@ -173,5 +184,18 @@ https://www.google.co.jp/
 
 ## チェックボックス
 
+```
 - [ ] チェック無し
 - [x] チェック有り
+```
+
+- [ ] チェック無し
+- [x] チェック有り
+
+## 画像
+
+```
+![sampleImage](/assets/markdown-sample/sampleImage.png)
+```
+
+![sampleImage](/assets/markdown-sample/sampleImage.png)
