@@ -1,7 +1,9 @@
 import { makeStyles, Theme, Typography } from '@material-ui/core';
 import React, { FC } from 'react';
 import { Content } from '../types';
+import CategoryLabel from './CategoryLabel';
 import CustomLink from './CustomLink';
+import FormatDate from './FormatDate';
 
 const useStyles = makeStyles((theme: Theme) => ({
   item: {
@@ -12,7 +14,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
   },
   title: {
-    margin: theme.spacing(0)
+    fontSize: '1.5rem',
+    fontWeight: 'bold',
+    marginTop: theme.spacing(0),
+    marginBottom: theme.spacing(1)
   }
 }));
 
@@ -24,15 +29,17 @@ const ArticleCard: FC<Props> = ({ article }) => {
   const { id, date, title, category } = article;
   const classes = useStyles();
   return (
-    <CustomLink href={`/articles/${id}`}>
-      <article className={classes.item}>
-          <h2 className={classes.title}>{title}</h2>
-          <Typography variant="caption">{date}</Typography>
-          {category.map(item => (
-            <Typography key={item} variant="caption">{item}</Typography>
-          ))}
-      </article>
-    </CustomLink>
+    <article className={classes.item}>
+      <div className={classes.title}>
+        <CustomLink href={`/articles/${id}`}>
+          <span>{title}</span>
+        </CustomLink>
+      </div>
+      <FormatDate date={date} />
+      {category.map(item => (
+        <CategoryLabel key={item} category={item} />
+      ))}
+    </article>
   );
 };
 

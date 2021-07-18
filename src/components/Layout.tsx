@@ -9,7 +9,10 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   content: {
     [theme.breakpoints.up('sm')]: {
-      margin: theme.spacing(2)
+      marginTop: theme.spacing(5),
+      marginLeft: theme.spacing(15),
+      marginRight: theme.spacing(15),
+      marginBottom: theme.spacing(5)
     },
     width: '100%',
   }

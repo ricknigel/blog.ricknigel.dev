@@ -8,15 +8,20 @@ import markdown from 'remark-parse';
 import gfm from 'remark-gfm';
 import footnotes from 'remark-footnotes';
 import html from 'remark-html';
+import FormatDate from '../../src/components/FormatDate';
+import CategoryLabel from '../../src/components/CategoryLabel';
 const hljs = require('remark-highlight.js');
 
 const ArticlePage: NextPage<Content> = (props) => {
-  const { title, content, date } = props;
+  const { title, content, date, category } = props;
   return (
     <Card className="markdown-body" variant="outlined">
       <CardContent>
         <Typography variant="h1">{title}</Typography>
-        <p>{date}</p>
+        <FormatDate date={date} />
+        {category.map(item => (
+          <CategoryLabel key={item} category={item} />
+        ))}
         <Divider />
         <div dangerouslySetInnerHTML={{ __html: content }} />
         </CardContent>

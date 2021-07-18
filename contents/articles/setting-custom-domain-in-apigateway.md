@@ -1,6 +1,6 @@
 ---
 title: 'Serverless Frameworkを使用してAPI Gatewayにカスタムドメインを設定する方法'
-date: '2021/04/10'
+date: '20210410'
 category: ['AWS']
 ---
 
