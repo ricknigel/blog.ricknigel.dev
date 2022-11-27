@@ -1,29 +1,30 @@
-import { makeStyles, Theme } from '@material-ui/core';
-import Link from 'next/link';
 import React, { FC } from 'react';
 
-const useStyles = makeStyles((theme: Theme) => ({
-  link: {
-    textDecoration: 'none',
-    color: 'inherit',
-    '&:visited': {
-      color: 'inherit'
-    },
-    '&:hover': {
-      color: theme.palette.grey[500],
-    },
-  }
+import Link from 'next/link';
+
+import { styled } from '@mui/material';
+
+import { ChildrenProp } from 'modules/types/types';
+
+const CustomA = styled('a')(({ theme }) => ({
+  textDecoration: 'none',
+  color: 'inherit',
+  '&:visited': {
+    color: 'inherit'
+  },
+  '&:hover': {
+    color: theme.palette.grey[500],
+  },
 }));
 
-type Props = {
-  href: string
-}
+type Props = ChildrenProp & {
+  href: string;
+};
 
 const CustomLink: FC<Props> = ({ href, children }) => {
-  const classes = useStyles();
   return (
     <Link href={href}>
-      <a className={classes.link}>{children}</a>
+      <CustomA>{children}</CustomA>
     </Link>
   );
 };

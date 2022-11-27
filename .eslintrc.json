@@ -1,0 +1,63 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:import/warnings",
+    "prettier"
+  ],
+  "rules": {
+    "semi": ["error", "always"],
+    "semi-spacing": ["error", { "after": true, "before": false }],
+    "semi-style": ["error", "last"],
+    "no-extra-semi": "error",
+    "no-unexpected-multiline": "error",
+    "no-unreachable": "error",
+    "quotes": ["error", "single"],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "object",
+          "type",
+          "index"
+        ],
+        "alphabetize": {
+          "order": "asc"
+        },
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "newlines-between": "always",
+        "pathGroups": [
+          {
+            "pattern": "react**",
+            "group": "builtin",
+            "position": "before"
+          },
+          {
+            "pattern": "{next,next/**}",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "{@mui**,@emotion/**}",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "{components/**,modules/**,pages/**}",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "*.css",
+            "group": "index",
+            "position": "after"
+          }
+        ]
+      }
+    ]
+  }
+}

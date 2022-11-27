@@ -1,5 +1,6 @@
 import fs from'fs';
 import path from 'path';
+
 import matter from 'gray-matter';
 
 const dir = path.join(process.cwd(), 'contents/articles');
@@ -42,8 +43,10 @@ export const getArticleById = async (id: string) => {
 
   const data = {
     content: matterResult.content,
-    ...matterData
-  }
+    title: matterData.title,
+    date: matterData.date,
+    category: matterData.category
+  };
 
   return data;
 };

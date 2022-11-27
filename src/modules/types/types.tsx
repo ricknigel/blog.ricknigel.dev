@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 export type Article = {
   contents: Content[]
 };
@@ -11,4 +13,8 @@ export type Matter = {
   title: string
   date: string
   category: string[]
+};
+
+export type ChildrenProp = {
+  children: ReactNode;
 };

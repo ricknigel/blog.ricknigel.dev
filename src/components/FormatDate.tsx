@@ -1,19 +1,12 @@
 import React, { FC } from 'react';
-import { makeStyles, Theme, Typography } from '@material-ui/core';
 
-const useStyle = makeStyles((theme: Theme) => ({
-  text: {
-    fontSize: '0.875rem',
-    marginRight: theme.spacing(2)
-  }
-}))
+import { Typography } from '@mui/material';
 
 type Props = {
   date: string;
 }
 
 const FormatDate: FC<Props> = ({ date }) => {
-  const classes = useStyle();
   const formatDate = (targetDate: string) => {
     // YYYYMMDD(8桁)の場合、YYYY/MM/DDに変換
     return /^\d{8}$/.test(targetDate)
@@ -22,7 +15,7 @@ const FormatDate: FC<Props> = ({ date }) => {
   };
 
   return (
-    <Typography className={classes.text} variant="caption">
+    <Typography variant="caption" sx={{ fontSize: '0.875rem', mr: 2 }}>
       {formatDate(date)}
     </Typography>
   );

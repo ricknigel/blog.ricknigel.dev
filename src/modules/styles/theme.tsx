@@ -1,8 +1,8 @@
-import { createMuiTheme } from "@material-ui/core";
+import { createTheme } from '@mui/material/styles';
 
-export const myTheme = createMuiTheme({
+export const myTheme = createTheme({
   palette: {
-    type: 'light',
+    mode: 'light',
     background: {
       default: '#eef0f1'
     },
@@ -12,8 +12,11 @@ export const myTheme = createMuiTheme({
   },
   typography: {
     fontFamily: [
-      '"Segoe UI"',
       'Noto Sans JP',
+      'Google Sans',
+      'Roboto',
+      'Arial',
+      'sans-serif',
     ].join(',')
   }
 });

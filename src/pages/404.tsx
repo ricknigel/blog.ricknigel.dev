@@ -1,5 +1,6 @@
 import React from 'react';
-import CustomLink from '../src/components/CustomLink';
+
+import CustomLink from 'components/CustomLink';
 
 const NotFound = () => (
   <div>

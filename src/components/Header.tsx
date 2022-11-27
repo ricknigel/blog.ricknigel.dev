@@ -1,19 +1,19 @@
-import React, { Fragment } from 'react';
-import { AppBar, Toolbar } from '@material-ui/core';
-import CustomLink from './CustomLink';
+import React from 'react';
+
+import { AppBar, Toolbar } from '@mui/material';
+
+import CustomLink from 'components/CustomLink';
 
 const Header = () => (
-  <Fragment>
-    <AppBar position="static" color="default" variant="outlined">
-      <Toolbar>
-        <h2>
-          <CustomLink href={'/'}>
-            {'ricknigel.dev'}
-          </CustomLink>
-        </h2>
-      </Toolbar>
-    </AppBar>
-  </Fragment>
+  <AppBar position="static" color="default">
+    <Toolbar>
+      <h2>
+        {/* <CustomLink href={'/'}> */}
+          {'ricknigel.dev'}
+        {/* </CustomLink> */}
+      </h2>
+    </Toolbar>
+  </AppBar>
 );
 
 export default Header;
