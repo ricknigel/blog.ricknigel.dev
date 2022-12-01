@@ -11,13 +11,17 @@ const RootDiv = styled(Box)({
 });
 
 const Main = styled('main')(({ theme }) => ({
+  width: '100%',
+  marginTop: theme.spacing(3),
+  marginBottom: theme.spacing(3),
   [theme.breakpoints.up('sm')]: {
-    marginTop: theme.spacing(5),
-    marginLeft: theme.spacing(15),
-    marginRight: theme.spacing(15),
-    marginBottom: theme.spacing(5)
+    marginLeft: theme.spacing(5),
+    marginRight: theme.spacing(5),
   },
-  width: '100%'
+  [theme.breakpoints.down('sm')]: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+  },
 }));
 
 type Props = {

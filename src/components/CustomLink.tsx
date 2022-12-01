@@ -1,31 +1,31 @@
 import React, { FC } from 'react';
 
+import { UrlObject } from 'url';
+
 import Link from 'next/link';
 
 import { styled } from '@mui/material';
 
 import { ChildrenProp } from 'modules/types/types';
 
-const CustomA = styled('a')(({ theme }) => ({
+const StyledLink = styled(Link)(({ theme }) => ({
+  color: theme.palette.text.primary,
   textDecoration: 'none',
-  color: 'inherit',
-  '&:visited': {
-    color: 'inherit'
-  },
   '&:hover': {
-    color: theme.palette.grey[500],
+    cursor: 'pointer',
+    color: theme.palette.grey[500]
   },
 }));
 
 type Props = ChildrenProp & {
-  href: string;
+  href: string | UrlObject;
 };
 
 const CustomLink: FC<Props> = ({ href, children }) => {
   return (
-    <Link href={href}>
-      <CustomA>{children}</CustomA>
-    </Link>
+    <StyledLink href={href} passHref>
+      {children}
+    </StyledLink>
   );
 };
 

@@ -8,9 +8,9 @@ const Header = () => (
   <AppBar position="static" color="default">
     <Toolbar>
       <h2>
-        {/* <CustomLink href={'/'}> */}
+        <CustomLink href={'/'}>
           {'ricknigel.dev'}
-        {/* </CustomLink> */}
+        </CustomLink>
       </h2>
     </Toolbar>
   </AppBar>

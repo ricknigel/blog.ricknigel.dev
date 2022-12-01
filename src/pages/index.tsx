@@ -9,27 +9,25 @@ import ArticleCard from 'components/ArticleCard';
 import { getArticleList } from 'modules/services/blogService';
 import { Article } from 'modules/types/types';
 
-
-const Title = styled('h2')(({ theme }) => ({
-  marginLeft: theme.spacing(2)
+const Title = styled('h1')(() => ({
+  fontSize: '25px'
 }));
 
-const Outline = styled(Box)(() => ({
-  border: '1px solid #e1e4e8',
+const Outline = styled(Box)(({ theme }) => ({
+  border: `1px solid ${theme.palette.divider}`,
   borderRadius: '6px',
-  backgroundColor: 'white'
 }));
 
 const ListHeader = styled('header')(({ theme }) => ({
   padding: theme.spacing(2),
-  backgroundColor: '#f6f8fa',
+  backgroundColor: theme.palette.background.paper,
   borderTopLeftRadius: '6px',
   borderTopRightRadius: '6px'
 }));
 
 const ArticleListPage: NextPage<Article> = ({ contents }) => {
   return(
-    <div>
+    <Box>
       <Title>{'記事一覧'}</Title>
       <Outline>
         <ListHeader>{'カテゴリ'}</ListHeader>
@@ -37,7 +35,7 @@ const ArticleListPage: NextPage<Article> = ({ contents }) => {
           <ArticleCard key={item.id} article={item} />
         ))}
       </Outline>
-    </div>
+    </Box>
   );
 };
 

@@ -1,13 +1,18 @@
+import { grey } from '@mui/material/colors';
 import { createTheme } from '@mui/material/styles';
 
 export const myTheme = createTheme({
   palette: {
-    mode: 'light',
+    mode: 'dark',
     background: {
-      default: '#eef0f1'
+      default: '#0d1117',
+      paper: '#161b22'
     },
-    secondary: {
-      main: '#3b49df'
+    primary: {
+      main: '#3367D6'
+    },
+    text: {
+      primary: grey[300]
     }
   },
   typography: {

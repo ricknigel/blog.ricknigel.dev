@@ -8,11 +8,12 @@ import CustomLink from 'components/CustomLink';
 import FormatDate from 'components/FormatDate';
 import { Content } from 'modules/types/types';
 
-const Article = styled('article')(({ theme }) => ({
+const Article = styled(Box)(({ theme }) => ({
   padding: theme.spacing(2),
-  borderTop: '1px solid #e1e4e8',
+  backgroundColor: theme.palette.background.paper,
+  borderTop: `1px solid ${theme.palette.divider}`,
   '&:hover': {
-    backgroundColor: '#f6f8fa'
+    backgroundColor: 'rgba(255, 255, 255, 0.055)'
   }
 }));
 
@@ -32,9 +33,9 @@ const ArticleCard: FC<Props> = ({ article }) => {
   return (
     <Article>
       <Title>
-        {/* <CustomLink href={`/articles/${id}`}> */}
+        <CustomLink href={`/articles/${id}`}>
           <span>{title}</span>
-        {/* </CustomLink> */}
+        </CustomLink>
       </Title>
       <FormatDate date={date} />
       {category.map(item => (

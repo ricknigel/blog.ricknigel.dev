@@ -17,7 +17,6 @@ import { Content } from 'modules/types/types';
 
 const ArticlePage: NextPage<Content> = (props) => {
   const { title, content, date, category } = props;
-  console.log(category);
   return (
     <Card className="markdown-body" variant="outlined">
       <CardContent>
@@ -35,7 +34,6 @@ const ArticlePage: NextPage<Content> = (props) => {
 
 export const getStaticPaths = async () => {
   const contents = await getArticleList();
-  console.log(contents);
   const paths = contents.map(item => `/articles/${item.id}`);
 
   return {
